@@ -1,0 +1,2 @@
+# Horizon2020-A-step-towards-crime-free-india-
+The project aims at taking a closer look and doing a in-depth-study on the current crime patterns in India.The application serves multiple functionalities relating to analyze,summarize, compare and predict the crime trend.The application makes use of new generation s/w technologies as Machine learning and Data Visualization to provide user friendly and meaningful insights in form of graphs and charts to the end users.
