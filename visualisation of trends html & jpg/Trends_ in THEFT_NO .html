@@ -1,0 +1,2173 @@
+
+<!DOCTYPE html>
+<head>
+  <title>Vega-Lite Chart</title>
+  <meta charset="utf-8">
+
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/2.6.5/vega.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/1.2.1/vega-lite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/2.2.0/vega-embed.min.js" charset="utf-8"></script>
+
+  <style media="screen">
+    /* Add space between vega-embed links  */
+    .vega-actions a {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Container for the visualization -->
+  <div id="vis"></div>
+
+  <script>
+  var vlSpec = {
+    "config": {
+        "cell": {
+            "height": 400.0,
+            "width": 1000.0
+        }
+    },
+    "encoding": {
+        "color": {
+            "field": "STATE_UT",
+            "type": "nominal"
+        },
+        "x": {
+            "axis": {
+                "axisWidth": 0.5,
+                "labelAngle": 0.0,
+                "title": "Places"
+            },
+            "field": "YEAR",
+            "type": "temporal"
+        },
+        "y": {
+            "axis": {
+                "title": "Total THEFT_NOat different places"
+            },
+            "field": "THEFT_NO",
+            "type": "quantitative"
+        }
+    },
+    "mark": "area",
+    "data": {
+        "values": [
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2001,
+                "THEFT_NO": 16751
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2002,
+                "THEFT_NO": 19222
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2003,
+                "THEFT_NO": 23408
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2004,
+                "THEFT_NO": 23578
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2005,
+                "THEFT_NO": 23778
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2006,
+                "THEFT_NO": 23510
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2007,
+                "THEFT_NO": 24391
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2008,
+                "THEFT_NO": 25362
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2009,
+                "THEFT_NO": 24692
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2010,
+                "THEFT_NO": 26756
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2011,
+                "THEFT_NO": 28267
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2012,
+                "THEFT_NO": 27475
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2001,
+                "THEFT_NO": 443
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2002,
+                "THEFT_NO": 395
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2003,
+                "THEFT_NO": 370
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2004,
+                "THEFT_NO": 388
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2005,
+                "THEFT_NO": 531
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2006,
+                "THEFT_NO": 451
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2007,
+                "THEFT_NO": 513
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2008,
+                "THEFT_NO": 445
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2009,
+                "THEFT_NO": 381
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2010,
+                "THEFT_NO": 445
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2011,
+                "THEFT_NO": 414
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2012,
+                "THEFT_NO": 402
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2001,
+                "THEFT_NO": 5367
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2002,
+                "THEFT_NO": 5555
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2003,
+                "THEFT_NO": 5525
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2004,
+                "THEFT_NO": 5866
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2005,
+                "THEFT_NO": 6369
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2006,
+                "THEFT_NO": 7820
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2007,
+                "THEFT_NO": 7754
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2008,
+                "THEFT_NO": 8012
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2009,
+                "THEFT_NO": 7644
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2010,
+                "THEFT_NO": 7860
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2011,
+                "THEFT_NO": 8309
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2012,
+                "THEFT_NO": 9394
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2001,
+                "THEFT_NO": 9701
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2002,
+                "THEFT_NO": 10145
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2003,
+                "THEFT_NO": 10124
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2004,
+                "THEFT_NO": 11113
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2005,
+                "THEFT_NO": 10812
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2006,
+                "THEFT_NO": 11752
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2007,
+                "THEFT_NO": 11795
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2008,
+                "THEFT_NO": 13206
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2009,
+                "THEFT_NO": 15221
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2010,
+                "THEFT_NO": 15544
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2011,
+                "THEFT_NO": 16292
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2012,
+                "THEFT_NO": 17667
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2001,
+                "THEFT_NO": 4812
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2002,
+                "THEFT_NO": 4302
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2003,
+                "THEFT_NO": 4170
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2004,
+                "THEFT_NO": 5014
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2005,
+                "THEFT_NO": 5600
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2006,
+                "THEFT_NO": 5262
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2007,
+                "THEFT_NO": 5381
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2008,
+                "THEFT_NO": 6079
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2009,
+                "THEFT_NO": 5792
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2010,
+                "THEFT_NO": 5805
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2011,
+                "THEFT_NO": 5315
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2012,
+                "THEFT_NO": 5341
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2001,
+                "THEFT_NO": 576
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2002,
+                "THEFT_NO": 496
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2003,
+                "THEFT_NO": 464
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2004,
+                "THEFT_NO": 503
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2005,
+                "THEFT_NO": 495
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2006,
+                "THEFT_NO": 494
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2007,
+                "THEFT_NO": 494
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2008,
+                "THEFT_NO": 601
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2009,
+                "THEFT_NO": 858
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2010,
+                "THEFT_NO": 1034
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2011,
+                "THEFT_NO": 1115
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2012,
+                "THEFT_NO": 915
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2001,
+                "THEFT_NO": 15834
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2002,
+                "THEFT_NO": 15742
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2003,
+                "THEFT_NO": 19304
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2004,
+                "THEFT_NO": 18551
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2005,
+                "THEFT_NO": 17964
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2006,
+                "THEFT_NO": 18475
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2007,
+                "THEFT_NO": 18164
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2008,
+                "THEFT_NO": 20715
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2009,
+                "THEFT_NO": 19669
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2010,
+                "THEFT_NO": 16794
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2011,
+                "THEFT_NO": 16043
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2012,
+                "THEFT_NO": 15952
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2001,
+                "THEFT_NO": 6117
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2002,
+                "THEFT_NO": 5962
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2003,
+                "THEFT_NO": 5591
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2004,
+                "THEFT_NO": 6558
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2005,
+                "THEFT_NO": 8694
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2006,
+                "THEFT_NO": 10518
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2007,
+                "THEFT_NO": 11047
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2008,
+                "THEFT_NO": 12709
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2009,
+                "THEFT_NO": 12917
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2010,
+                "THEFT_NO": 16266
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2011,
+                "THEFT_NO": 17425
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2012,
+                "THEFT_NO": 17590
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2001,
+                "THEFT_NO": 600
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2002,
+                "THEFT_NO": 564
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2003,
+                "THEFT_NO": 627
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2004,
+                "THEFT_NO": 643
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2005,
+                "THEFT_NO": 696
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2006,
+                "THEFT_NO": 812
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2007,
+                "THEFT_NO": 1092
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2008,
+                "THEFT_NO": 1152
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2009,
+                "THEFT_NO": 823
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2010,
+                "THEFT_NO": 838
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2011,
+                "THEFT_NO": 1042
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2012,
+                "THEFT_NO": 769
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2001,
+                "THEFT_NO": 1919
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2002,
+                "THEFT_NO": 2020
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2003,
+                "THEFT_NO": 1949
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2004,
+                "THEFT_NO": 1939
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2005,
+                "THEFT_NO": 1901
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2006,
+                "THEFT_NO": 1937
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2007,
+                "THEFT_NO": 2086
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2008,
+                "THEFT_NO": 2198
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2009,
+                "THEFT_NO": 2631
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2010,
+                "THEFT_NO": 2510
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2011,
+                "THEFT_NO": 2655
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2012,
+                "THEFT_NO": 2022
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2001,
+                "THEFT_NO": 3827
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2002,
+                "THEFT_NO": 4374
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2003,
+                "THEFT_NO": 4155
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2004,
+                "THEFT_NO": 4374
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2005,
+                "THEFT_NO": 6195
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2006,
+                "THEFT_NO": 6173
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2007,
+                "THEFT_NO": 7091
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2008,
+                "THEFT_NO": 7269
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2009,
+                "THEFT_NO": 7716
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2010,
+                "THEFT_NO": 7090
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2011,
+                "THEFT_NO": 6378
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2012,
+                "THEFT_NO": 6680
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2001,
+                "THEFT_NO": 12868
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2002,
+                "THEFT_NO": 13818
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2003,
+                "THEFT_NO": 14180
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2004,
+                "THEFT_NO": 16093
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2005,
+                "THEFT_NO": 17008
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2006,
+                "THEFT_NO": 14901
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2007,
+                "THEFT_NO": 14351
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2008,
+                "THEFT_NO": 17820
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2009,
+                "THEFT_NO": 20576
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2010,
+                "THEFT_NO": 20093
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2011,
+                "THEFT_NO": 19834
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2012,
+                "THEFT_NO": 18418
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2001,
+                "THEFT_NO": 5441
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2002,
+                "THEFT_NO": 5743
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2003,
+                "THEFT_NO": 4891
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2004,
+                "THEFT_NO": 5240
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2005,
+                "THEFT_NO": 5454
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2006,
+                "THEFT_NO": 5431
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2007,
+                "THEFT_NO": 5609
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2008,
+                "THEFT_NO": 5818
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2009,
+                "THEFT_NO": 5564
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2010,
+                "THEFT_NO": 4380
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2011,
+                "THEFT_NO": 4704
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2012,
+                "THEFT_NO": 4078
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2001,
+                "THEFT_NO": 20263
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2002,
+                "THEFT_NO": 20759
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2003,
+                "THEFT_NO": 20422
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2004,
+                "THEFT_NO": 22586
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2005,
+                "THEFT_NO": 20685
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2006,
+                "THEFT_NO": 21733
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2007,
+                "THEFT_NO": 22396
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2008,
+                "THEFT_NO": 24583
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2009,
+                "THEFT_NO": 23260
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2010,
+                "THEFT_NO": 21577
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2011,
+                "THEFT_NO": 22414
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2012,
+                "THEFT_NO": 23182
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2001,
+                "THEFT_NO": 39866
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2002,
+                "THEFT_NO": 37606
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2003,
+                "THEFT_NO": 37098
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2004,
+                "THEFT_NO": 43952
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2005,
+                "THEFT_NO": 46851
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2006,
+                "THEFT_NO": 46473
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2007,
+                "THEFT_NO": 47681
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2008,
+                "THEFT_NO": 52860
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2009,
+                "THEFT_NO": 50930
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2010,
+                "THEFT_NO": 52565
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2011,
+                "THEFT_NO": 53449
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2012,
+                "THEFT_NO": 47476
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2001,
+                "THEFT_NO": 217
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2002,
+                "THEFT_NO": 255
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2003,
+                "THEFT_NO": 252
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2004,
+                "THEFT_NO": 244
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2005,
+                "THEFT_NO": 243
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2006,
+                "THEFT_NO": 290
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2007,
+                "THEFT_NO": 454
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2008,
+                "THEFT_NO": 446
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2009,
+                "THEFT_NO": 394
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2010,
+                "THEFT_NO": 417
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2011,
+                "THEFT_NO": 719
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2012,
+                "THEFT_NO": 903
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2001,
+                "THEFT_NO": 271
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2002,
+                "THEFT_NO": 392
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2003,
+                "THEFT_NO": 360
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2004,
+                "THEFT_NO": 418
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2005,
+                "THEFT_NO": 476
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2006,
+                "THEFT_NO": 470
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2007,
+                "THEFT_NO": 500
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2008,
+                "THEFT_NO": 669
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2009,
+                "THEFT_NO": 545
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2010,
+                "THEFT_NO": 664
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2011,
+                "THEFT_NO": 696
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2012,
+                "THEFT_NO": 543
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2001,
+                "THEFT_NO": 878
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2002,
+                "THEFT_NO": 999
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2003,
+                "THEFT_NO": 1303
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2004,
+                "THEFT_NO": 610
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2005,
+                "THEFT_NO": 777
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2006,
+                "THEFT_NO": 758
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2007,
+                "THEFT_NO": 808
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2008,
+                "THEFT_NO": 747
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2009,
+                "THEFT_NO": 761
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2010,
+                "THEFT_NO": 823
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2011,
+                "THEFT_NO": 734
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2012,
+                "THEFT_NO": 605
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2001,
+                "THEFT_NO": 258
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2002,
+                "THEFT_NO": 257
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2003,
+                "THEFT_NO": 221
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2004,
+                "THEFT_NO": 255
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2005,
+                "THEFT_NO": 294
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2006,
+                "THEFT_NO": 327
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2007,
+                "THEFT_NO": 360
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2008,
+                "THEFT_NO": 345
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2009,
+                "THEFT_NO": 347
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2010,
+                "THEFT_NO": 397
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2011,
+                "THEFT_NO": 360
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2012,
+                "THEFT_NO": 381
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2001,
+                "THEFT_NO": 5622
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2002,
+                "THEFT_NO": 5268
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2003,
+                "THEFT_NO": 5359
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2004,
+                "THEFT_NO": 5967
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2005,
+                "THEFT_NO": 6743
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2006,
+                "THEFT_NO": 6567
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2007,
+                "THEFT_NO": 6830
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2008,
+                "THEFT_NO": 7419
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2009,
+                "THEFT_NO": 7136
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2010,
+                "THEFT_NO": 7572
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2011,
+                "THEFT_NO": 8724
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2012,
+                "THEFT_NO": 9630
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2001,
+                "THEFT_NO": 3023
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2002,
+                "THEFT_NO": 2963
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2003,
+                "THEFT_NO": 3198
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2004,
+                "THEFT_NO": 2587
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2005,
+                "THEFT_NO": 2924
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2006,
+                "THEFT_NO": 3946
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2007,
+                "THEFT_NO": 5173
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2008,
+                "THEFT_NO": 5563
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2009,
+                "THEFT_NO": 5624
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2010,
+                "THEFT_NO": 5446
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2011,
+                "THEFT_NO": 4784
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2012,
+                "THEFT_NO": 5272
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2001,
+                "THEFT_NO": 16939
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2002,
+                "THEFT_NO": 16313
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2003,
+                "THEFT_NO": 16456
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2004,
+                "THEFT_NO": 18842
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2005,
+                "THEFT_NO": 17898
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2006,
+                "THEFT_NO": 17889
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2007,
+                "THEFT_NO": 19345
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2008,
+                "THEFT_NO": 20411
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2009,
+                "THEFT_NO": 22144
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2010,
+                "THEFT_NO": 22324
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2011,
+                "THEFT_NO": 21099
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2012,
+                "THEFT_NO": 23314
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2001,
+                "THEFT_NO": 74
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2002,
+                "THEFT_NO": 64
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2003,
+                "THEFT_NO": 65
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2004,
+                "THEFT_NO": 73
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2005,
+                "THEFT_NO": 81
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2006,
+                "THEFT_NO": 113
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2007,
+                "THEFT_NO": 118
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2008,
+                "THEFT_NO": 127
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2009,
+                "THEFT_NO": 62
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2010,
+                "THEFT_NO": 53
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2011,
+                "THEFT_NO": 72
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2012,
+                "THEFT_NO": 117
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2001,
+                "THEFT_NO": 16709
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2002,
+                "THEFT_NO": 18755
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2003,
+                "THEFT_NO": 18213
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2004,
+                "THEFT_NO": 17530
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2005,
+                "THEFT_NO": 15851
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2006,
+                "THEFT_NO": 13651
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2007,
+                "THEFT_NO": 13217
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2008,
+                "THEFT_NO": 15019
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2009,
+                "THEFT_NO": 15712
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2010,
+                "THEFT_NO": 14583
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2011,
+                "THEFT_NO": 13924
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2012,
+                "THEFT_NO": 11996
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2001,
+                "THEFT_NO": 259
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2002,
+                "THEFT_NO": 270
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2003,
+                "THEFT_NO": 276
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2004,
+                "THEFT_NO": 260
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2005,
+                "THEFT_NO": 325
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2006,
+                "THEFT_NO": 392
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2007,
+                "THEFT_NO": 411
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2008,
+                "THEFT_NO": 499
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2009,
+                "THEFT_NO": 415
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2010,
+                "THEFT_NO": 457
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2011,
+                "THEFT_NO": 494
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2012,
+                "THEFT_NO": 565
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2001,
+                "THEFT_NO": 27011
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2002,
+                "THEFT_NO": 22419
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2003,
+                "THEFT_NO": 15751
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2004,
+                "THEFT_NO": 22524
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2005,
+                "THEFT_NO": 20695
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2006,
+                "THEFT_NO": 20447
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2007,
+                "THEFT_NO": 22816
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2008,
+                "THEFT_NO": 25946
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2009,
+                "THEFT_NO": 29226
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2010,
+                "THEFT_NO": 31153
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2011,
+                "THEFT_NO": 36683
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2012,
+                "THEFT_NO": 37376
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2001,
+                "THEFT_NO": 1419
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2002,
+                "THEFT_NO": 1365
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2003,
+                "THEFT_NO": 1368
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2004,
+                "THEFT_NO": 1597
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2005,
+                "THEFT_NO": 1630
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2006,
+                "THEFT_NO": 1696
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2007,
+                "THEFT_NO": 1593
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2008,
+                "THEFT_NO": 1622
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2009,
+                "THEFT_NO": 1601
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2010,
+                "THEFT_NO": 2138
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2011,
+                "THEFT_NO": 2093
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2012,
+                "THEFT_NO": 1913
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2001,
+                "THEFT_NO": 14245
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2002,
+                "THEFT_NO": 12449
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2003,
+                "THEFT_NO": 12613
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2004,
+                "THEFT_NO": 14465
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2005,
+                "THEFT_NO": 12124
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2006,
+                "THEFT_NO": 12532
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2007,
+                "THEFT_NO": 13747
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2008,
+                "THEFT_NO": 17334
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2009,
+                "THEFT_NO": 17133
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2010,
+                "THEFT_NO": 19389
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2011,
+                "THEFT_NO": 21446
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2012,
+                "THEFT_NO": 22991
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2001,
+                "THEFT_NO": 65
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2002,
+                "THEFT_NO": 49
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2003,
+                "THEFT_NO": 60
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2004,
+                "THEFT_NO": 103
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2005,
+                "THEFT_NO": 92
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2006,
+                "THEFT_NO": 101
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2007,
+                "THEFT_NO": 112
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2008,
+                "THEFT_NO": 128
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2009,
+                "THEFT_NO": 134
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2010,
+                "THEFT_NO": 121
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2011,
+                "THEFT_NO": 88
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2012,
+                "THEFT_NO": 71
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2001,
+                "THEFT_NO": 1529
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2002,
+                "THEFT_NO": 1647
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2003,
+                "THEFT_NO": 1238
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2004,
+                "THEFT_NO": 1459
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2005,
+                "THEFT_NO": 1373
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2006,
+                "THEFT_NO": 1234
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2007,
+                "THEFT_NO": 1740
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2008,
+                "THEFT_NO": 1991
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2009,
+                "THEFT_NO": 1731
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2010,
+                "THEFT_NO": 1481
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2011,
+                "THEFT_NO": 1502
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2012,
+                "THEFT_NO": 1549
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2001,
+                "THEFT_NO": 45
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2002,
+                "THEFT_NO": 75
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2003,
+                "THEFT_NO": 61
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2004,
+                "THEFT_NO": 53
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2005,
+                "THEFT_NO": 74
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2006,
+                "THEFT_NO": 61
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2007,
+                "THEFT_NO": 87
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2008,
+                "THEFT_NO": 54
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2009,
+                "THEFT_NO": 63
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2010,
+                "THEFT_NO": 63
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2011,
+                "THEFT_NO": 69
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2012,
+                "THEFT_NO": 68
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2001,
+                "THEFT_NO": 40
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2002,
+                "THEFT_NO": 56
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2003,
+                "THEFT_NO": 46
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2004,
+                "THEFT_NO": 27
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2005,
+                "THEFT_NO": 50
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2006,
+                "THEFT_NO": 63
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2007,
+                "THEFT_NO": 43
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2008,
+                "THEFT_NO": 49
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2009,
+                "THEFT_NO": 41
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2010,
+                "THEFT_NO": 47
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2011,
+                "THEFT_NO": 47
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2012,
+                "THEFT_NO": 55
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2001,
+                "THEFT_NO": 19276
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2002,
+                "THEFT_NO": 16625
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2003,
+                "THEFT_NO": 15544
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2004,
+                "THEFT_NO": 18994
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2005,
+                "THEFT_NO": 17955
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2006,
+                "THEFT_NO": 17498
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2007,
+                "THEFT_NO": 17037
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2008,
+                "THEFT_NO": 18867
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2009,
+                "THEFT_NO": 21731
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2010,
+                "THEFT_NO": 23088
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2011,
+                "THEFT_NO": 22899
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2012,
+                "THEFT_NO": 22032
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2001,
+                "THEFT_NO": 10
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2002,
+                "THEFT_NO": 12
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2003,
+                "THEFT_NO": 8
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2004,
+                "THEFT_NO": 5
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2005,
+                "THEFT_NO": 7
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2006,
+                "THEFT_NO": 17
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2007,
+                "THEFT_NO": 20
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2008,
+                "THEFT_NO": 8
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2009,
+                "THEFT_NO": 10
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2010,
+                "THEFT_NO": 5
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2011,
+                "THEFT_NO": 4
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2012,
+                "THEFT_NO": 7
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2001,
+                "THEFT_NO": 528
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2002,
+                "THEFT_NO": 526
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2003,
+                "THEFT_NO": 567
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2004,
+                "THEFT_NO": 634
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2005,
+                "THEFT_NO": 466
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2006,
+                "THEFT_NO": 560
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2007,
+                "THEFT_NO": 787
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2008,
+                "THEFT_NO": 688
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2009,
+                "THEFT_NO": 711
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2010,
+                "THEFT_NO": 534
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2011,
+                "THEFT_NO": 707
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2012,
+                "THEFT_NO": 658
+            }
+        ]
+    },
+    "$schema": "https://vega.github.io/schema/vega-lite/v1.2.1.json"
+}
+
+  var embedSpec = {
+    mode: "vega-lite",  // Instruct Vega-Embed to use the Vega-Lite compiler
+    spec: vlSpec
+  };
+
+  // Embed the visualization in the container with id `vis`
+  vg.embed("#vis", embedSpec, function(error, result) {
+    // Callback receiving the View instance and parsed Vega spec
+    // result.view is the View, which resides under the '#vis' element
+  });
+  </script>
+</body>
+</html>

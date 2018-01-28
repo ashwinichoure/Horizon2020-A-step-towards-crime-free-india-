@@ -1,0 +1,1646 @@
+
+<!DOCTYPE html>
+<head>
+  <title>Vega-Lite Chart</title>
+  <meta charset="utf-8">
+
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/2.6.5/vega.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/1.2.1/vega-lite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/2.2.0/vega-embed.min.js" charset="utf-8"></script>
+
+  <style media="screen">
+    /* Add space between vega-embed links  */
+    .vega-actions a {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Container for the visualization -->
+  <div id="vis"></div>
+
+  <script>
+  var vlSpec = {
+    "config": {
+        "cell": {
+            "height": 400.0,
+            "width": 600.0
+        }
+    },
+    "encoding": {
+        "color": {
+            "field": "PLACE_OCCURENCE",
+            "type": "nominal"
+        },
+        "x": {
+            "axis": {
+                "title": "states"
+            },
+            "field": "STATE_UT",
+            "type": "nominal"
+        },
+        "y": {
+            "axis": {
+                "title": "Total robbery at different places"
+            },
+            "field": "ROBBERY_NO",
+            "type": "quantitative"
+        }
+    },
+    "mark": "line",
+    "data": {
+        "values": [
+            {
+                "STATE_UT": "A&N Islands",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 1
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 1
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 64
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 8
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 13
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 232
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 1486
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 3037
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 124
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 204
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 2612
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 21
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 80
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 164
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 69
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 288
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 321
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 1
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Assam",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 31
+            },
+            {
+                "STATE_UT": "Assam",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 882
+            },
+            {
+                "STATE_UT": "Assam",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 991
+            },
+            {
+                "STATE_UT": "Assam",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 3129
+            },
+            {
+                "STATE_UT": "Assam",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 46
+            },
+            {
+                "STATE_UT": "Assam",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 63
+            },
+            {
+                "STATE_UT": "Assam",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 2357
+            },
+            {
+                "STATE_UT": "Assam",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 14
+            },
+            {
+                "STATE_UT": "Assam",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 17
+            },
+            {
+                "STATE_UT": "Bihar",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 97
+            },
+            {
+                "STATE_UT": "Bihar",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 862
+            },
+            {
+                "STATE_UT": "Bihar",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 11913
+            },
+            {
+                "STATE_UT": "Bihar",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 7351
+            },
+            {
+                "STATE_UT": "Bihar",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 210
+            },
+            {
+                "STATE_UT": "Bihar",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 594
+            },
+            {
+                "STATE_UT": "Bihar",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 2823
+            },
+            {
+                "STATE_UT": "Bihar",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 26
+            },
+            {
+                "STATE_UT": "Bihar",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 384
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 56
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 295
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 46
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 47
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 133
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 706
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 3510
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 65
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 96
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 619
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 2
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 31
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 3
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 6
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 11
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 10
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 1
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 5
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 15
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 2
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 3
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 453
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 371
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 4452
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 60
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 90
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 1092
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 30
+            },
+            {
+                "STATE_UT": "Goa",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 5
+            },
+            {
+                "STATE_UT": "Goa",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 27
+            },
+            {
+                "STATE_UT": "Goa",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 40
+            },
+            {
+                "STATE_UT": "Goa",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 162
+            },
+            {
+                "STATE_UT": "Goa",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 2
+            },
+            {
+                "STATE_UT": "Goa",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 3
+            },
+            {
+                "STATE_UT": "Goa",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 58
+            },
+            {
+                "STATE_UT": "Goa",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 3
+            },
+            {
+                "STATE_UT": "Goa",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 1
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 28
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 963
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 1039
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 9578
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 170
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 514
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 2245
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 16
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 344
+            },
+            {
+                "STATE_UT": "Haryana",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 57
+            },
+            {
+                "STATE_UT": "Haryana",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 490
+            },
+            {
+                "STATE_UT": "Haryana",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 1088
+            },
+            {
+                "STATE_UT": "Haryana",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 3377
+            },
+            {
+                "STATE_UT": "Haryana",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 100
+            },
+            {
+                "STATE_UT": "Haryana",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 137
+            },
+            {
+                "STATE_UT": "Haryana",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 716
+            },
+            {
+                "STATE_UT": "Haryana",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 6
+            },
+            {
+                "STATE_UT": "Haryana",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 37
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 8
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 17
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 33
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 147
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 1
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 1
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 30
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 34
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 86
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 23
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 781
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 10
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 10
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 378
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 91
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 395
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 4105
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 1708
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 179
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 280
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 2124
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 8
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 101
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 124
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 708
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 734
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 12346
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 108
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 274
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 3098
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 3
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 166
+            },
+            {
+                "STATE_UT": "Kerala",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 21
+            },
+            {
+                "STATE_UT": "Kerala",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 520
+            },
+            {
+                "STATE_UT": "Kerala",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 365
+            },
+            {
+                "STATE_UT": "Kerala",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 5467
+            },
+            {
+                "STATE_UT": "Kerala",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 15
+            },
+            {
+                "STATE_UT": "Kerala",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 48
+            },
+            {
+                "STATE_UT": "Kerala",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 1907
+            },
+            {
+                "STATE_UT": "Kerala",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 1
+            },
+            {
+                "STATE_UT": "Kerala",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 33
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 63
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 650
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 2909
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 15345
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 239
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 488
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 2819
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 40
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 249
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 125
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 1957
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 3570
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 26581
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 717
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 1251
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 4221
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 14
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 534
+            },
+            {
+                "STATE_UT": "Manipur",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Manipur",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 1
+            },
+            {
+                "STATE_UT": "Manipur",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 28
+            },
+            {
+                "STATE_UT": "Manipur",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 44
+            },
+            {
+                "STATE_UT": "Manipur",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Manipur",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Manipur",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 10
+            },
+            {
+                "STATE_UT": "Manipur",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Manipur",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 1
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 78
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 306
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 398
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 189
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 46
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 41
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 24
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 3
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 6
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 103
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 337
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 335
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 13
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 13
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 248
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Odisha",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 69
+            },
+            {
+                "STATE_UT": "Odisha",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 1445
+            },
+            {
+                "STATE_UT": "Odisha",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 4403
+            },
+            {
+                "STATE_UT": "Odisha",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 6018
+            },
+            {
+                "STATE_UT": "Odisha",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 329
+            },
+            {
+                "STATE_UT": "Odisha",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 400
+            },
+            {
+                "STATE_UT": "Odisha",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 2366
+            },
+            {
+                "STATE_UT": "Odisha",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 4
+            },
+            {
+                "STATE_UT": "Odisha",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 71
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 10
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 61
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 18
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Punjab",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 53
+            },
+            {
+                "STATE_UT": "Punjab",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 228
+            },
+            {
+                "STATE_UT": "Punjab",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 163
+            },
+            {
+                "STATE_UT": "Punjab",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 1058
+            },
+            {
+                "STATE_UT": "Punjab",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 10
+            },
+            {
+                "STATE_UT": "Punjab",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 12
+            },
+            {
+                "STATE_UT": "Punjab",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 314
+            },
+            {
+                "STATE_UT": "Punjab",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Punjab",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 2
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 30
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 225
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 769
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 7723
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 22
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 52
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 272
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 30
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 4
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 3
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 33
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 2
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 2
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 22
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 18
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 753
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 920
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 6572
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 120
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 245
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 2752
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 12
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 125
+            },
+            {
+                "STATE_UT": "Tripura",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 28
+            },
+            {
+                "STATE_UT": "Tripura",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 86
+            },
+            {
+                "STATE_UT": "Tripura",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 25
+            },
+            {
+                "STATE_UT": "Tripura",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 255
+            },
+            {
+                "STATE_UT": "Tripura",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Tripura",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Tripura",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 383
+            },
+            {
+                "STATE_UT": "Tripura",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Tripura",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 97
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 312
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 13737
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 13198
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 155
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 692
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 2725
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 6
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 537
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 10
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 41
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 726
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 902
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 2
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 7
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 304
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 0
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 5
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "PLACE_OCCURENCE": "BANKS",
+                "ROBBERY_NO": 174
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "PLACE_OCCURENCE": "COMMERCIAL ESTABLISHMENTS",
+                "ROBBERY_NO": 569
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "PLACE_OCCURENCE": "HIGH-WAY",
+                "ROBBERY_NO": 921
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "PLACE_OCCURENCE": "OTHER PLACES",
+                "ROBBERY_NO": 4415
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "PLACE_OCCURENCE": "OTHERS RLY.",
+                "ROBBERY_NO": 35
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "PLACE_OCCURENCE": "RAILWAYS",
+                "ROBBERY_NO": 229
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "PLACE_OCCURENCE": "RESIDENTIAL PREMISES",
+                "ROBBERY_NO": 1036
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "PLACE_OCCURENCE": "RIVER & SEA",
+                "ROBBERY_NO": 10
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "PLACE_OCCURENCE": "RUNNING TRAINS",
+                "ROBBERY_NO": 194
+            }
+        ]
+    },
+    "$schema": "https://vega.github.io/schema/vega-lite/v1.2.1.json"
+}
+
+  var embedSpec = {
+    mode: "vega-lite",  // Instruct Vega-Embed to use the Vega-Lite compiler
+    spec: vlSpec
+  };
+
+  // Embed the visualization in the container with id `vis`
+  vg.embed("#vis", embedSpec, function(error, result) {
+    // Callback receiving the View instance and parsed Vega spec
+    // result.view is the View, which resides under the '#vis' element
+  });
+  </script>
+</body>
+</html>

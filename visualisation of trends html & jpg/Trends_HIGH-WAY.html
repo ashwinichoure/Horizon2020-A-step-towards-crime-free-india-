@@ -1,0 +1,2171 @@
+
+<!DOCTYPE html>
+<head>
+  <title>Vega-Lite Chart</title>
+  <meta charset="utf-8">
+
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/2.6.5/vega.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/1.2.1/vega-lite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/2.2.0/vega-embed.min.js" charset="utf-8"></script>
+
+  <style media="screen">
+    /* Add space between vega-embed links  */
+    .vega-actions a {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Container for the visualization -->
+  <div id="vis"></div>
+
+  <script>
+  var vlSpec = {
+    "config": {
+        "cell": {
+            "height": 400.0,
+            "width": 600.0
+        }
+    },
+    "encoding": {
+        "color": {
+            "field": "STATE_UT",
+            "type": "nominal"
+        },
+        "x": {
+            "axis": {
+                "title": "States"
+            },
+            "field": "YEAR",
+            "type": "temporal"
+        },
+        "y": {
+            "axis": {
+                "title": "Number of crimes on high way"
+            },
+            "field": "DACOITY_NUM",
+            "type": "quantitative"
+        }
+    },
+    "mark": "line",
+    "data": {
+        "values": [
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2001,
+                "DACOITY_NUM": 57
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2002,
+                "DACOITY_NUM": 36
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2003,
+                "DACOITY_NUM": 34
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2004,
+                "DACOITY_NUM": 51
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2005,
+                "DACOITY_NUM": 59
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2006,
+                "DACOITY_NUM": 42
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2007,
+                "DACOITY_NUM": 35
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2008,
+                "DACOITY_NUM": 28
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2009,
+                "DACOITY_NUM": 31
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2010,
+                "DACOITY_NUM": 40
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2011,
+                "DACOITY_NUM": 28
+            },
+            {
+                "STATE_UT": "Andhra Pradesh",
+                "YEAR": 2012,
+                "DACOITY_NUM": 30
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2001,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2002,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2003,
+                "DACOITY_NUM": 2
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2004,
+                "DACOITY_NUM": 3
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2005,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2006,
+                "DACOITY_NUM": 3
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2007,
+                "DACOITY_NUM": 2
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2008,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2009,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2010,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2011,
+                "DACOITY_NUM": 5
+            },
+            {
+                "STATE_UT": "Arunachal Pradesh",
+                "YEAR": 2012,
+                "DACOITY_NUM": 3
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2001,
+                "DACOITY_NUM": 46
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2002,
+                "DACOITY_NUM": 49
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2003,
+                "DACOITY_NUM": 48
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2004,
+                "DACOITY_NUM": 49
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2005,
+                "DACOITY_NUM": 43
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2006,
+                "DACOITY_NUM": 36
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2007,
+                "DACOITY_NUM": 38
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2008,
+                "DACOITY_NUM": 36
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2009,
+                "DACOITY_NUM": 22
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2010,
+                "DACOITY_NUM": 26
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2011,
+                "DACOITY_NUM": 20
+            },
+            {
+                "STATE_UT": "Assam",
+                "YEAR": 2012,
+                "DACOITY_NUM": 7
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2001,
+                "DACOITY_NUM": 162
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2002,
+                "DACOITY_NUM": 149
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2003,
+                "DACOITY_NUM": 163
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2004,
+                "DACOITY_NUM": 205
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2005,
+                "DACOITY_NUM": 173
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2006,
+                "DACOITY_NUM": 109
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2007,
+                "DACOITY_NUM": 117
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2008,
+                "DACOITY_NUM": 99
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2009,
+                "DACOITY_NUM": 165
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2010,
+                "DACOITY_NUM": 207
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2011,
+                "DACOITY_NUM": 194
+            },
+            {
+                "STATE_UT": "Bihar",
+                "YEAR": 2012,
+                "DACOITY_NUM": 191
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2001,
+                "DACOITY_NUM": 10
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2002,
+                "DACOITY_NUM": 6
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2003,
+                "DACOITY_NUM": 6
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2004,
+                "DACOITY_NUM": 12
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2005,
+                "DACOITY_NUM": 3
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2006,
+                "DACOITY_NUM": 24
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2007,
+                "DACOITY_NUM": 15
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2008,
+                "DACOITY_NUM": 10
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2009,
+                "DACOITY_NUM": 17
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2010,
+                "DACOITY_NUM": 2
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2011,
+                "DACOITY_NUM": 11
+            },
+            {
+                "STATE_UT": "Chhattisgarh",
+                "YEAR": 2012,
+                "DACOITY_NUM": 6
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2001,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2002,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2003,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2004,
+                "DACOITY_NUM": 3
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2005,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2006,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2007,
+                "DACOITY_NUM": 2
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2008,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2009,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2010,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2011,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Goa",
+                "YEAR": 2012,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2001,
+                "DACOITY_NUM": 58
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2002,
+                "DACOITY_NUM": 75
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2003,
+                "DACOITY_NUM": 62
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2004,
+                "DACOITY_NUM": 76
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2005,
+                "DACOITY_NUM": 44
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2006,
+                "DACOITY_NUM": 51
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2007,
+                "DACOITY_NUM": 37
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2008,
+                "DACOITY_NUM": 34
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2009,
+                "DACOITY_NUM": 15
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2010,
+                "DACOITY_NUM": 21
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2011,
+                "DACOITY_NUM": 23
+            },
+            {
+                "STATE_UT": "Gujarat",
+                "YEAR": 2012,
+                "DACOITY_NUM": 32
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2001,
+                "DACOITY_NUM": 11
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2002,
+                "DACOITY_NUM": 10
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2003,
+                "DACOITY_NUM": 9
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2004,
+                "DACOITY_NUM": 11
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2005,
+                "DACOITY_NUM": 11
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2006,
+                "DACOITY_NUM": 32
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2007,
+                "DACOITY_NUM": 31
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2008,
+                "DACOITY_NUM": 29
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2009,
+                "DACOITY_NUM": 37
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2010,
+                "DACOITY_NUM": 42
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2011,
+                "DACOITY_NUM": 58
+            },
+            {
+                "STATE_UT": "Haryana",
+                "YEAR": 2012,
+                "DACOITY_NUM": 68
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2001,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2002,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2003,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2004,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2005,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2006,
+                "DACOITY_NUM": 2
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2007,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2008,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2009,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2010,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2011,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Himachal Pradesh",
+                "YEAR": 2012,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2001,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2002,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2003,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2004,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2005,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2006,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2007,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2008,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2009,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2010,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2011,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Jammu&Kashmir",
+                "YEAR": 2012,
+                "DACOITY_NUM": 2
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2001,
+                "DACOITY_NUM": 209
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2002,
+                "DACOITY_NUM": 208
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2003,
+                "DACOITY_NUM": 245
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2004,
+                "DACOITY_NUM": 208
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2005,
+                "DACOITY_NUM": 188
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2006,
+                "DACOITY_NUM": 171
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2007,
+                "DACOITY_NUM": 161
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2008,
+                "DACOITY_NUM": 154
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2009,
+                "DACOITY_NUM": 116
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2010,
+                "DACOITY_NUM": 111
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2011,
+                "DACOITY_NUM": 84
+            },
+            {
+                "STATE_UT": "Jharkhand",
+                "YEAR": 2012,
+                "DACOITY_NUM": 116
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2001,
+                "DACOITY_NUM": 16
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2002,
+                "DACOITY_NUM": 22
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2003,
+                "DACOITY_NUM": 29
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2004,
+                "DACOITY_NUM": 35
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2005,
+                "DACOITY_NUM": 28
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2006,
+                "DACOITY_NUM": 14
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2007,
+                "DACOITY_NUM": 22
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2008,
+                "DACOITY_NUM": 42
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2009,
+                "DACOITY_NUM": 31
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2010,
+                "DACOITY_NUM": 34
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2011,
+                "DACOITY_NUM": 24
+            },
+            {
+                "STATE_UT": "Karnataka",
+                "YEAR": 2012,
+                "DACOITY_NUM": 20
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2001,
+                "DACOITY_NUM": 16
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2002,
+                "DACOITY_NUM": 7
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2003,
+                "DACOITY_NUM": 9
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2004,
+                "DACOITY_NUM": 11
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2005,
+                "DACOITY_NUM": 10
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2006,
+                "DACOITY_NUM": 13
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2007,
+                "DACOITY_NUM": 21
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2008,
+                "DACOITY_NUM": 11
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2009,
+                "DACOITY_NUM": 13
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2010,
+                "DACOITY_NUM": 9
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2011,
+                "DACOITY_NUM": 10
+            },
+            {
+                "STATE_UT": "Kerala",
+                "YEAR": 2012,
+                "DACOITY_NUM": 4
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2001,
+                "DACOITY_NUM": 31
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2002,
+                "DACOITY_NUM": 23
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2003,
+                "DACOITY_NUM": 27
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2004,
+                "DACOITY_NUM": 23
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2005,
+                "DACOITY_NUM": 19
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2006,
+                "DACOITY_NUM": 23
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2007,
+                "DACOITY_NUM": 15
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2008,
+                "DACOITY_NUM": 14
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2009,
+                "DACOITY_NUM": 22
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2010,
+                "DACOITY_NUM": 16
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2011,
+                "DACOITY_NUM": 21
+            },
+            {
+                "STATE_UT": "Madhya Pradesh",
+                "YEAR": 2012,
+                "DACOITY_NUM": 15
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2001,
+                "DACOITY_NUM": 76
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2002,
+                "DACOITY_NUM": 91
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2003,
+                "DACOITY_NUM": 59
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2004,
+                "DACOITY_NUM": 88
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2005,
+                "DACOITY_NUM": 65
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2006,
+                "DACOITY_NUM": 64
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2007,
+                "DACOITY_NUM": 79
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2008,
+                "DACOITY_NUM": 78
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2009,
+                "DACOITY_NUM": 88
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2010,
+                "DACOITY_NUM": 85
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2011,
+                "DACOITY_NUM": 81
+            },
+            {
+                "STATE_UT": "Maharashtra",
+                "YEAR": 2012,
+                "DACOITY_NUM": 79
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2001,
+                "DACOITY_NUM": 17
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2002,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2003,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2004,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2005,
+                "DACOITY_NUM": 4
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2006,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2007,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2008,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2009,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2010,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2011,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Manipur",
+                "YEAR": 2012,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2001,
+                "DACOITY_NUM": 25
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2002,
+                "DACOITY_NUM": 29
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2003,
+                "DACOITY_NUM": 28
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2004,
+                "DACOITY_NUM": 17
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2005,
+                "DACOITY_NUM": 32
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2006,
+                "DACOITY_NUM": 21
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2007,
+                "DACOITY_NUM": 19
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2008,
+                "DACOITY_NUM": 16
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2009,
+                "DACOITY_NUM": 18
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2010,
+                "DACOITY_NUM": 13
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2011,
+                "DACOITY_NUM": 27
+            },
+            {
+                "STATE_UT": "Meghalaya",
+                "YEAR": 2012,
+                "DACOITY_NUM": 20
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2001,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2002,
+                "DACOITY_NUM": 3
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2003,
+                "DACOITY_NUM": 4
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2004,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2005,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2006,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2007,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2008,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2009,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2010,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2011,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Mizoram",
+                "YEAR": 2012,
+                "DACOITY_NUM": 2
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2001,
+                "DACOITY_NUM": 3
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2002,
+                "DACOITY_NUM": 3
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2003,
+                "DACOITY_NUM": 11
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2004,
+                "DACOITY_NUM": 2
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2005,
+                "DACOITY_NUM": 8
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2006,
+                "DACOITY_NUM": 7
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2007,
+                "DACOITY_NUM": 7
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2008,
+                "DACOITY_NUM": 4
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2009,
+                "DACOITY_NUM": 3
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2010,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2011,
+                "DACOITY_NUM": 2
+            },
+            {
+                "STATE_UT": "Nagaland",
+                "YEAR": 2012,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2001,
+                "DACOITY_NUM": 26
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2002,
+                "DACOITY_NUM": 33
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2003,
+                "DACOITY_NUM": 21
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2004,
+                "DACOITY_NUM": 24
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2005,
+                "DACOITY_NUM": 37
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2006,
+                "DACOITY_NUM": 76
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2007,
+                "DACOITY_NUM": 50
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2008,
+                "DACOITY_NUM": 52
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2009,
+                "DACOITY_NUM": 88
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2010,
+                "DACOITY_NUM": 103
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2011,
+                "DACOITY_NUM": 111
+            },
+            {
+                "STATE_UT": "Odisha",
+                "YEAR": 2012,
+                "DACOITY_NUM": 114
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2001,
+                "DACOITY_NUM": 3
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2002,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2003,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2004,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2005,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2006,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2007,
+                "DACOITY_NUM": 3
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2008,
+                "DACOITY_NUM": 2
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2009,
+                "DACOITY_NUM": 10
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2010,
+                "DACOITY_NUM": 2
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2011,
+                "DACOITY_NUM": 3
+            },
+            {
+                "STATE_UT": "Punjab",
+                "YEAR": 2012,
+                "DACOITY_NUM": 8
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2001,
+                "DACOITY_NUM": 15
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2002,
+                "DACOITY_NUM": 17
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2003,
+                "DACOITY_NUM": 6
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2004,
+                "DACOITY_NUM": 21
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2005,
+                "DACOITY_NUM": 8
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2006,
+                "DACOITY_NUM": 9
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2007,
+                "DACOITY_NUM": 6
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2008,
+                "DACOITY_NUM": 11
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2009,
+                "DACOITY_NUM": 18
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2010,
+                "DACOITY_NUM": 10
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2011,
+                "DACOITY_NUM": 8
+            },
+            {
+                "STATE_UT": "Rajasthan",
+                "YEAR": 2012,
+                "DACOITY_NUM": 7
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2001,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2002,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2003,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2004,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2005,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2006,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2007,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2008,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2009,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2010,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2011,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Sikkim",
+                "YEAR": 2012,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2001,
+                "DACOITY_NUM": 24
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2002,
+                "DACOITY_NUM": 36
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2003,
+                "DACOITY_NUM": 20
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2004,
+                "DACOITY_NUM": 14
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2005,
+                "DACOITY_NUM": 17
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2006,
+                "DACOITY_NUM": 11
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2007,
+                "DACOITY_NUM": 14
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2008,
+                "DACOITY_NUM": 12
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2009,
+                "DACOITY_NUM": 17
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2010,
+                "DACOITY_NUM": 14
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2011,
+                "DACOITY_NUM": 26
+            },
+            {
+                "STATE_UT": "Tamil Nadu",
+                "YEAR": 2012,
+                "DACOITY_NUM": 11
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2001,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2002,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2003,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2004,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2005,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2006,
+                "DACOITY_NUM": 3
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2007,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2008,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2009,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2010,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2011,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Tripura",
+                "YEAR": 2012,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2001,
+                "DACOITY_NUM": 208
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2002,
+                "DACOITY_NUM": 63
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2003,
+                "DACOITY_NUM": 69
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2004,
+                "DACOITY_NUM": 78
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2005,
+                "DACOITY_NUM": 55
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2006,
+                "DACOITY_NUM": 42
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2007,
+                "DACOITY_NUM": 47
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2008,
+                "DACOITY_NUM": 37
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2009,
+                "DACOITY_NUM": 58
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2010,
+                "DACOITY_NUM": 55
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2011,
+                "DACOITY_NUM": 71
+            },
+            {
+                "STATE_UT": "Uttar Pradesh",
+                "YEAR": 2012,
+                "DACOITY_NUM": 66
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2001,
+                "DACOITY_NUM": 4
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2002,
+                "DACOITY_NUM": 2
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2003,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2004,
+                "DACOITY_NUM": 6
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2005,
+                "DACOITY_NUM": 11
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2006,
+                "DACOITY_NUM": 2
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2007,
+                "DACOITY_NUM": 17
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2008,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2009,
+                "DACOITY_NUM": 3
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2010,
+                "DACOITY_NUM": 3
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2011,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Uttarakhand",
+                "YEAR": 2012,
+                "DACOITY_NUM": 5
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2001,
+                "DACOITY_NUM": 40
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2002,
+                "DACOITY_NUM": 21
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2003,
+                "DACOITY_NUM": 15
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2004,
+                "DACOITY_NUM": 26
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2005,
+                "DACOITY_NUM": 20
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2006,
+                "DACOITY_NUM": 19
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2007,
+                "DACOITY_NUM": 8
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2008,
+                "DACOITY_NUM": 17
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2009,
+                "DACOITY_NUM": 24
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2010,
+                "DACOITY_NUM": 34
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2011,
+                "DACOITY_NUM": 20
+            },
+            {
+                "STATE_UT": "West Bengal",
+                "YEAR": 2012,
+                "DACOITY_NUM": 30
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2001,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2002,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2003,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2004,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2005,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2006,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2007,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2008,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2009,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2010,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2011,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "A&N Islands",
+                "YEAR": 2012,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2001,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2002,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2003,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2004,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2005,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2006,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2007,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2008,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2009,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2010,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2011,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Chandigarh",
+                "YEAR": 2012,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2001,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2002,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2003,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2004,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2005,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2006,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2007,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2008,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2009,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2010,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2011,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "D&N Haveli",
+                "YEAR": 2012,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2001,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2002,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2003,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2004,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2005,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2006,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2007,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2008,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2009,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2010,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2011,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Daman&Diu",
+                "YEAR": 2012,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2001,
+                "DACOITY_NUM": 3
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2002,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2003,
+                "DACOITY_NUM": 7
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2004,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2005,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2006,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2007,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2008,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2009,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2010,
+                "DACOITY_NUM": 2
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2011,
+                "DACOITY_NUM": 2
+            },
+            {
+                "STATE_UT": "Delhi UT",
+                "YEAR": 2012,
+                "DACOITY_NUM": 1
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2001,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2002,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2003,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2004,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2005,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2006,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2007,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2008,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2009,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2010,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2011,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Lakshadweep",
+                "YEAR": 2012,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2001,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2002,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2003,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2004,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2005,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2006,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2007,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2008,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2009,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2010,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2011,
+                "DACOITY_NUM": 0
+            },
+            {
+                "STATE_UT": "Puducherry",
+                "YEAR": 2012,
+                "DACOITY_NUM": 0
+            }
+        ]
+    },
+    "$schema": "https://vega.github.io/schema/vega-lite/v1.2.1.json"
+}
+
+  var embedSpec = {
+    mode: "vega-lite",  // Instruct Vega-Embed to use the Vega-Lite compiler
+    spec: vlSpec
+  };
+
+  // Embed the visualization in the container with id `vis`
+  vg.embed("#vis", embedSpec, function(error, result) {
+    // Callback receiving the View instance and parsed Vega spec
+    // result.view is the View, which resides under the '#vis' element
+  });
+  </script>
+</body>
+</html>
