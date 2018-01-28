@@ -1,0 +1,58 @@
+Context
+This dataset contains complete information about various aspects of crimes happened
+in India from 2001-14. There are many factors that can be analysed from this dataset.
+Over all, this dataset helps us to understand better about crime and policing in India.
+
+I : SC/ST Cases Reported and their Disposal by Police and Court
+	Crime against SCs
+	Crime against STs
+
+II : Children Cases Reported and their Disposal by Police and Court
+
+	Abetment of Suicide (Section 305 IPC)
+	Buying of Girls for Prostitution (Section 373 IPC)
+	Child Marriage Restraint Act, 1929
+	Exposure and Abandonment (Section 317 IPC)
+	Foeticide (Section 315 and 316 IPC)
+	Infanticide (Section 315 IPC)
+	Kidnapping & Abduction (Section 360,361,363,363-A, 363 read with Section 384, 366, 367 & 369 IPC)
+	Murder (Section 302, 315 IPC)
+	Other Crimes against Children
+	Other Murder of Children (Section 302 IPC)
+	Procuration of Minor Girls (Section 366-A IPC)
+	Rape (Section 376 IPC)
+	Selling of Girls for Prostitution (Section 372 IPC)
+	Total Crimes against Children
+Cases under Crime Against Women
+	Rape
+	Kidnapping & Abduction of Women & Girls
+	Dowry Deaths
+	Molestation
+	Sexual Harassment
+	Cruelty by Husband and Relatives
+	Importation of Girls
+	Immoral Traffic Prevention Act, 1956
+	Dowry Prohibition Act, 1961
+	Indecent Representation of Women(Prohibition) Act, 1986
+	Sati Prevention Act, 1987
+	Total Crimes Against Women
+	Arrests under Crime Against Women
+	Rape
+	Kidnapping & Abduction of Women & Girls
+	Dowry Deaths
+	Molestation
+	Sexual Harassment
+	Cruelty by Husband and Relatives
+	Importation of Girls
+	Immoral Traffic Prevention Act, 1956
+	Dowry Prohibition, 1961
+	Indecent Representation of Women(Prohibition) Act, 1986
+	Sati Prevention Act, 1987
+	Total Crimes Against Women
+
+Some of the data contains district level data. 
+The districts are police districts and also include special police unit. 
+Therefore these may be different from revenue districts. 
+Most of the data is from 2001 to 2010. 
+But there are few files which has data only from 2011 and few are having 2001-14.
+
